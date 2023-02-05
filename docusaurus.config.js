@@ -65,7 +65,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/social.png',
       navbar: {
-        title: 'Phrude',
+        title: '',
         logo: {
           alt: 'Phrude Logo',
           src: 'img/logo.svg',
