@@ -1,2 +1,2 @@
 all:
-	USE_SSH=true yarn deploy
+	USE_SSH=true npm run deploy
