@@ -1,0 +1,8 @@
+{
+  "label": "検知ルール",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Phrudeのルール記述についての説明です"
+  }
+}

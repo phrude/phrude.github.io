@@ -2,46 +2,14 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Phrudeの紹介
 
-Let's discover **Docusaurus in less than 5 minutes**.
+PhrudeはProfiling History-based Runtime Detection systemの略称で、Webアプリに任意の処理を挿入する攻撃を検知するために内部処理分析を用いる新たなセキュリティ対策ツールです。
 
-## Getting Started
+- Webアプリに任意の処理を挿入する攻撃を検知
+- システムコールを使わない処理からなる攻撃を検知
+- 内部処理の記録から攻撃の原因を追跡可能
 
-Get started by **creating a new site**.
+という特徴を持ち、WAFの検知を回避したHTTPリクエスト経由のWebアプリに任意の処理を挿入する攻撃や、汚染パッケージによるサプライチェーン攻撃に効果があります。
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+またシステムコールによる攻撃検知ツール(Linux向けEDR製品・Falco・Tracee・Tetragon)で検知できない、環境変数の取得(getenv関数)の実行の検知・内部処理履歴からの原因追跡が可能です。
