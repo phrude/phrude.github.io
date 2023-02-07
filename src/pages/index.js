@@ -12,8 +12,8 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <img className={clsx('logo', styles.logoBanner)} src={require('@site/static/img/banner.png').default} />
+        <p className={clsx('tagline', styles.tagline)}>{siteConfig.tagline}</p>
         <p>詳細は<a href='/docs/intro'>ドキュメントページ</a>をご覧ください</p>
         <div className={styles.buttons}>
           <Link

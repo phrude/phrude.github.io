@@ -21,3 +21,13 @@
   align-items: center;
   justify-content: center;
 }
+
+.logoBanner {
+  width: 600px;
+  margin-bottom: 20px;
+}
+
+.tagline {
+  font-family: "Arial Rounded MT Bold";
+  font-size: 1.5em;
+}
