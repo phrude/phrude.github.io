@@ -8,14 +8,14 @@ Phrudeの検証で用いたPython Flask製のデモ用Webアプリを <https://g
 
 Webアプリに任意の処理を挿入する攻撃のうち、外部からのHTTPリクエスト経由の攻撃としてSSTI、内部からの攻撃として汚染ライブラリの混入(Pythonのコードで攻撃処理が記述されているもの・マルウェアバイナリを実行するもの)が実装されています。
 
-## Setup
+## デモ用Webアプリの立ち上げ
 
 動作させるためには
 
 - [Docker](https://docs.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
-をインストールしてください
+をインストールしてください。
 
 DockerおよびDocker Composeをインストール後、`docker compose up -d`コマンドで
 
