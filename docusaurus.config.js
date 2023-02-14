@@ -68,7 +68,7 @@ const config = {
         title: '',
         logo: {
           alt: 'Phrude Logo',
-          src: 'img/logo.svg',
+          src: 'img/banner.png',
         },
         items: [
           {
