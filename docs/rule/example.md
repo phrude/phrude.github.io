@@ -9,7 +9,7 @@ sidebar_position: 2
 マルウェアの実行・バックドアの実行・外部コマンドによる悪用などに使用されることがあります。
 
 ```yaml
-- name: code executed by subprocess
+- name: Arbitrary Code Execution Detection using subprocess package
   func: _execute_child
   file: subprocess.py
   value:
@@ -42,7 +42,7 @@ Flaskで開発サーバーで動作させる場合、自身のプログラムフ
 マルウェアの実行・バックドアの実行・外部コマンドによる悪用などに使用されることがあります。
 
 ```yaml
-- name: code executed by os.popen
+- name: Arbitrary Code Execution Detection using os.popen
   func: popen
   file: os.py
   value:
@@ -55,7 +55,7 @@ Flaskで開発サーバーで動作させる場合、自身のプログラムフ
 外部サーバーへの情報流出などに使用されることがあります。
 
 ```yaml
-- name: http request by urllib
+- name: External Server Connections using urllib package
   func: create_connection
   file: socket.py
   value:
@@ -63,12 +63,12 @@ Flaskで開発サーバーで動作させる場合、自身のプログラムフ
   level: warn
 ```
 
-### requestによる外部サーバーへのhttp接続
+### requestによる外部サーバーへのHTTP接続
 
 外部サーバーへの情報流出などに使用されることがあります。
 
 ```yaml
-- name: http request by requests
+- name: External Server Connections using requests package
   func: create_connection
   file: connection.py
   value:
@@ -76,12 +76,12 @@ Flaskで開発サーバーで動作させる場合、自身のプログラムフ
   level: warn
 ```
 
-### requestsによる外部サーバーへのhttp接続時のIPアドレスの記録
+### requestsによる外部サーバーへのHTTP接続時のIPアドレスの記録
 
-`ip2num`関数を検知することで、requestsによる外部サーバーへのhttp接続時のIPアドレスを記録できます。
+`ip2num`関数を検知することで、requestsによる外部サーバーへのHTTP接続時のIPアドレスを記録できます。
 
 ```yaml
-- name: connected ip addr by requests
+- name: IP Address Logging for External Server Connections using requests package
   func: ip2num
   file: request.py
   value:
@@ -94,7 +94,7 @@ Flaskで開発サーバーで動作させる場合、自身のプログラムフ
 `getaddrinfo`関数を検知することで、外部サーバーへの接続時のDNSの名前解決を記録できます。
 
 ```yaml
-- name: lookup dns record
+- name: DNS Query Logging for External Server Connections
   func: getaddrinfo
   file: socket.py
   value:
@@ -118,7 +118,7 @@ Flaskを起動する際に、自身のIPアドレス`0.0.0.0`への名前解決�
 環境変数に格納された鍵情報や機密パラメーターの流出などに使用されることがあります。
 
 ```yaml
-- name: process getenv
+- name: Detected Access to Environment Variable
   func: getenv
   file: os.py
   value:

@@ -11,7 +11,7 @@ sidebar_position: 1
 > 記述例
 >
 > ```yaml
-> - name: process getenv
+> - name: Detected Access to Environment Variable
 >   func: getenv
 >   file: os.py
 >   value:
