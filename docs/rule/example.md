@@ -9,7 +9,7 @@ sidebar_position: 2
 マルウェアの実行・バックドアの実行・外部コマンドによる悪用などに使用されることがあります。
 
 ```yaml
-- name: Arbitrary Code Execution Detection using subprocess package
+- name: Arbitrary Code Execution using subprocess package
   func: _execute_child
   file: subprocess.py
   value:
@@ -42,7 +42,7 @@ Flaskで開発サーバーで動作させる場合、自身のプログラムフ
 マルウェアの実行・バックドアの実行・外部コマンドによる悪用などに使用されることがあります。
 
 ```yaml
-- name: Arbitrary Code Execution Detection using os.popen
+- name: Arbitrary Code Execution using os.popen
   func: popen
   file: os.py
   value:
@@ -118,7 +118,7 @@ Flaskを起動する際に、自身のIPアドレス`0.0.0.0`への名前解決�
 環境変数に格納された鍵情報や機密パラメーターの流出などに使用されることがあります。
 
 ```yaml
-- name: Detected Access to Environment Variable
+- name: Access to Environment Variable
   func: getenv
   file: os.py
   value:
