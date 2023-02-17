@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Phrudeの紹介
 
-PhrudeはProfiling History-based Runtime Detection systemの略称で、Webアプリに任意の処理を挿入する攻撃を検知するために内部処理分析を用いる新たなセキュリティ対策ツールです。
+PhrudeはProfiling History-based Runtime Detection Systemの略称で、Webアプリに任意の処理を挿入する攻撃を検知するために内部処理分析を用いる新たなセキュリティ対策ツールです。
 
 - Webアプリに任意の処理を挿入する攻撃を検知
 - システムコールを使わない処理からなる攻撃を検知
